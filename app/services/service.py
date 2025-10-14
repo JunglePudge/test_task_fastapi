@@ -39,6 +39,7 @@ class ItemService:
                 pass
         
         filters = ItemFilters(page=page, limit=limit, since=since_dt)
+        return self.repository.get_items(filters)
     
     def get_active_items(self, page: int = 1, limit: int = 50) -> List[ItemIn]:
         items = self.repository.get_items(ItemFilters(page=page, limit=limit))
