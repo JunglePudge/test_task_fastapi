@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from api import router
-from external import fake_api
+from app.api.api import router
+from app.api.external import fake_api
 
 
 app = FastAPI()
