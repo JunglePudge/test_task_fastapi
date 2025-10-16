@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from app.api.api import router
 from app.api.external import fake_api
+from app.db.db import init_db
 
+init_db()
 
 app = FastAPI()
 app.mount("/external", fake_api)
